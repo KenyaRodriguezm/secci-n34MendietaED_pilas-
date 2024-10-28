@@ -20,6 +20,7 @@ public class Sección34MendietaED_pilas {
         
         
         JOptionPane.showMessageDialog(null,"Datos en pila ordenados es :\n"+pilaMendieta);
+        JOptionPane.showMessageDialog(null,"Autor: Kenya Mendieta Rodriguez  :\n"+pilaMendieta);
     }
     
 }
