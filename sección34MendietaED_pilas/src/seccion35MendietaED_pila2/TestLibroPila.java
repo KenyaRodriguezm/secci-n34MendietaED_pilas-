@@ -16,7 +16,7 @@ public class TestLibroPila extends javax.swing.JFrame {
     Libro libro5= new Libro("Garcia", "Android ", 2024, "Ed. Trillas ");
    
     
-    
+    //pila.push(libro1);
     public TestLibroPila() {
         initComponents();
     }
@@ -76,12 +76,15 @@ public class TestLibroPila extends javax.swing.JFrame {
         pila.push(libro4);
         pila.push(libro5);
       //imprimir INFORMACION DE LIBROS 
+      while (!pila.isEmpty()) {//inicia y termina while
       JOptionPane.showMessageDialog(null,"Datos de lirbos "
                                       +"\n Autor:" + pila.peek().getAutor()
-                + "Titulo: " + pila.peek().getTitulo()
-                + "Fecha Publicacion" + pila.peek().getAnio()
-                + "Editorial" + pila.peek().getEditorial()
+                                      + "Titulo: " + pila.peek().getTitulo()
+                                      + "Fecha Publicacion" + pila.peek().getAnio()
+                                      + "Editorial" + pila.peek().getEditorial()
     );
+      pila.pop();
+      }
       /*
         while (!pila.isEmpty()) {//inicia y termina while
             JOptionPane.showMessageDialog(null,"Datos de los libros "
@@ -90,9 +93,9 @@ public class TestLibroPila extends javax.swing.JFrame {
                     + "Fecha Publicacion"+pila.pop().getAnio()
                     + "Editorial"+pila.pop().getEditorial());
             */
-        }
         
         
+
     }//GEN-LAST:event_btnConsultaLibroPilaActionPerformed
 
     /**
