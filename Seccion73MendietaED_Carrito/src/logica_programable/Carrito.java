@@ -12,7 +12,8 @@ public class Carrito {//inicia clase
     
     private Map <String, Integer> historialcompras;
    
-    //base de conocimientos 
+    //base de conocimientos
+    //estructura de datos rapidisimas y facilita las cosas 
     private String [] recomendaciones={"leche","pan","tortilla","arroz","frijol","Azucar"};
    
     //constructor inicializar las estructuras de datos dinamicas 
@@ -27,9 +28,26 @@ public class Carrito {//inicia clase
     public void agregarProducto (String producto){//alta
         carrito.push(producto);
         historialcompras.put(producto,historialcompras.getOrDefault(producto, 0)+1);
-        JOptionPane.showMessageDialog(null,"agregado de producto con exito ");
+        JOptionPane.showMessageDialog(null,"agregado de producto con exito "+producto);
     }//alta 
     
+    //metodo para imprimir los productos 
+    
+    public  void mostrarCarrito(){
+        
+        
+        if (carrito.isEmpty()) {//empieza el if 
+           JOptionPane.showMessageDialog(null,"Carrito vacio "); 
+        } else {
+             JOptionPane.showMessageDialog(null,"Productos en el carrito  ");
+             for (String producto: carrito) {
+             JOptionPane.showMessageDialog(null,"Productos en el carrito\n"+producto);
+             
+                 
+            }
+        }//termina el ifelse
+        
+    }//termina metodo imprimir 
   
     
     
