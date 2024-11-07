@@ -48,6 +48,18 @@ public class Carrito {//inicia clase
         }//termina el ifelse
         
     }//termina metodo imprimir 
+    
+    //metodo para eliminar un elemento de stack
+    public  void  eliminarUltimoproducto(){
+        if (!carrito.isEmpty()) {
+            String producto =carrito.pop();
+            JOptionPane.showMessageDialog(null,"Producto ha sido eliminado\n"+producto);
+        } else {
+            JOptionPane.showMessageDialog(null,"el carrito esta vacio\n");
+             
+        }
+    }
+            
   
     
     
